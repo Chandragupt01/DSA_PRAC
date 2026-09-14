@@ -1,10 +1,10 @@
-''' Linked List Node Structure
+# Linked List Node Structure
 # Node Class
 class Node:
     def __init__(self, data):
         self.data = data
         self.next = None
-'''
+
 from typing import List
 class Solution:
     def arrayToList(self, arr: List[int]) -> 'Node':
