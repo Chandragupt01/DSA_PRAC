@@ -8,10 +8,12 @@ class ListNode:
 
 
 class Solution:
-    def insertBeforeHead(self, head: ListNode, X: int) -> ListNode:
+    def deleteHead(self, head: ListNode) -> ListNode:
         # Your code goes here
-        newNode=ListNode(X)
-        newNode.next=head
-        head.prev=newNode
-        head=newNode
+        if head.next==None:
+            return None
+        curr=head.next
+        head.next=None
+        curr.prev=None
+        head=curr
         return head
